@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арендовать</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/profile-style.css">
+
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+
+                        Мои з&#261;казы
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rent">
+
+                        Арен&#273;овать
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/drive-ave-recommends">
+
+                        Рекомен&#273;ации
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/facts">
+
+                        Интересные ф&#261;кты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/my-rate">
+
+                        Мой рейтинг
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rate-us">
+
+                        Оценить сервис
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="ad">
+            <a href="https://lexus.by/" target="_blank">
+                <img src="/images/assets/advertisment.jpg" alt="ad" width="340">
+            </a>
+        </div>
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <div class="form">
+
+            <div >
+                <h3 th:if='${error}' th:text='${error}' style='color: red;'></h3>
+                <div th:unless='${error}'>
+                    <h3 style='color: green;'>Success!</h3>
+                    <div>Id.: <span th:text='${id}' /></div>
+                    <div>Status: <span th:text='${status}' /></div>
+                    <div>Charge id.: <span th:text='${chargeId}' /></div>
+                    <div>Balance transaction id.: <span th:text='${balance_transaction}' /></div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

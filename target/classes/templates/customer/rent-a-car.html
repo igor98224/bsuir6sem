@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арендовать</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/profile-style.css">
+
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+
+                        Мои з&#261;казы
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rent">
+
+                        Арен&#273;овать
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/drive-ave-recommends">
+
+                        Рекомен&#273;ации
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/facts">
+
+                        Интересные ф&#261;кты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/my-rate">
+
+                        Мой рейтинг
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rate-us">
+
+                        Оценить сервис
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="ad">
+            <a href="https://lexus.by/" target="_blank">
+                <img src="/images/assets/advertisment.jpg" alt="ad" width="340">
+            </a>
+        </div>
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <div class="form">
+            <form action="#" th:action="@{/rent-car}" th:object="${car}" method="post">
+                <div class="field">
+                    <label for="id">Клиент</label>
+                    <input type="text" readonly id="login" name="login" placeholder="Клиент">
+                </div>
+
+                <div class="field">
+                    <label for="id">ID</label>
+                    <input type="text" readonly th:field="*{id}" id="id" placeholder="ID">
+                </div>
+
+                <div class="field">
+                    <label for="name">Марка</label>
+                    <input type="text" readonly th:field="*{name}" id="name" placeholder="Марка">
+                </div>
+
+                <div class="field">
+                    <label for="model">Модель</label>
+                    <input type="text" readonly th:field="*{model}" id="model" placeholder="Модель">
+                </div>
+
+                <div class="field">
+                    <label for="price">Цена</label>
+                    <input type="text" readonly th:field="*{price}" id="price" placeholder="Цена">
+                </div>
+<!------------------------------------------------------------------------------------------------------>
+                <div class="field">
+                    <label for="passengers">Кол-во пассажиров</label>
+                    <input type="text" readonly th:field="*{passengers}" id="passengers" placeholder="Цена">
+                </div>
+                <div class="field">
+                    <label for="rashodtopliva">Расход топлива</label>
+                    <input type="text" readonly th:field="*{rashodtopliva}" id="rashodtopliva" placeholder="Цена">
+                </div>
+                <div class="field">
+                    <label for="maxspeed">Макс. скорость</label>
+                    <input type="text" readonly th:field="*{maxspeed}" id="maxspeed" placeholder="Цена">
+                </div>
+                <div class="field">
+                    <label for="vremyarazgona">Время разгона</label>
+                    <input type="text" readonly th:field="*{vremyarazgona}" id="vremyarazgona" placeholder="Цена">
+                </div>
+                <div class="field">
+                    <label for="volumeofbak">Объем бака</label>
+                    <input type="text" readonly th:field="*{volumeofbak}" id="volumeofbak" placeholder="Цена">
+                </div>
+                <!------------------------------------------------------------------------------------------------------>
+
+                <div class="field">
+                    <label for="start">Дата начала</label>
+                    <input type="date" required name="start" id="start" >
+                </div>
+
+                <div class="field">
+                    <label for="end">Дата окончания</label>
+                    <input type="date" required name="end" id="end" >
+                </div>
+
+
+                <button class="btn-level" type="submit">Оплатить</button>
+            </form>
+
+
+        </div>
+        <script>
+            let login = document.querySelector("#login");
+            login.value = localStorage.getItem("login");
+        </script>
+
+    </div>
+</div>
+
+</body>
+</html>

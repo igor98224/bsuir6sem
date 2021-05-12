@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveAve</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/profile-style.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/add-car">
+
+                        Добавить &#261;втомобиль
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars-list">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/reports">
+
+                        Отчеты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/customer-comments">
+
+                        Отзывы
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <div >
+            <img class="content__logo" src="/images/assets/logo.png" alt="logo" width="200">
+        </div>
+
+        <div th:switch="${cars}">
+            <h2 th:case="null">Нет автомобилей</h2>
+            <div th:case="*" class="content__table">
+                <div th:each = "car : ${cars}" class="content__block hidden">
+
+                    <div class="description">
+                        <span class="label">Название: </span><span class="data" th:text="${car.name}"></span><br>
+                        <span class="label">Модель: </span><span class="data" th:text="${car.model}"></span><br>
+                        <span class="label">Пассажиры: </span><span class="data" th:text="${car.passengers}"></span><br>
+                        <span class="label">Расход топлива: </span><span class="data" th:text="${car.rashodtopliva}"></span><br>
+                        <span class="label">Тип двигателя: </span><span class="data" th:text="${car.typedvigatelya}"></span><br>
+                        <span class="label">Макс. скорость: </span><span class="data" th:text="${car.maxspeed}"></span><br>
+                        <span class="label">Стоимость: </span><span class="data" th:text="${car.price}"></span><br>
+                        <span class="label">Время разгона: </span><span class="data" th:text="${car.vremyarazgona}"></span><br>
+                        <span class="label">Объем банзобака: </span><span class="data" th:text="${car.volumeofbak}"></span>
+                        <span class="label">Забронировано: </span><span class="data" th:text="${car.isBusy}"></span>
+                        <a th:href = "@{update-car/{id} (id=${car.id})}">
+                            <button style="margin-top: 30px;" type="button" class="btn-bevel">Обновить</button>
+                        </a>
+                        <div class="delete"><a th:href = "@{car-delete/{id} (id=${car.id})}">&times;</a></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

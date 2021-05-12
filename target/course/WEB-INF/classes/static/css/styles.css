@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background:url("../images/assets/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height:100vh;
+}
+
+.main-block{
+    background-color: #fffcfc;
+    border-radius: 40px;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    left: 27.5%;
+    top: 15%;
+    padding: 0.9rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-block>img{
+    margin: 40px;
+    
+}
+
+p{
+    margin: 10px;
+    text-align: center;
+}
+
+.drive{
+    color:rgb(17, 16, 16);
+}
+
+.ave{
+    color:rgb(66, 155, 238);
+}
+  
+button{
+margin-bottom: 40px;
+text-align: center;
+width: 100%;
+display: block;
+cursor: pointer;
+}
+
+.btn-bevel{
+font-size: 16px;
+font-weight: bold;
+font-size: 16px;
+color: #FFFFFF;
+line-height: 1.5;
+padding: .5em 2em;
+background-image: linear-gradient(-180deg, 	#6EB1FF 0%, #4A90E2 100%);
+border: 1px solid #3F84E1;
+box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20), 	inset 0 3px 2px 0 rgba(255,255,255,0.16);
+border-radius: 5px;
+} 
+
+.btn-bevel:hover {
+background-image: linear-gradient(-180deg, 	#77B6FD 0%, #5999E5 100%);
+}
+

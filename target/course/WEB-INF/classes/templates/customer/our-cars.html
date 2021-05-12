@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши автомобили</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/profile-style.css">
+
+
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+
+                        Мои з&#261;казы
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rent">
+
+                        Арен&#273;овать
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/drive-ave-recommends">
+
+                        Рекомен&#273;ации
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/facts">
+
+                        Интересные ф&#261;кты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/my-rate">
+
+                        Мой рейтинг
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rate-us">
+
+                        Оценить сервис
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="ad">
+            <a href="https://lexus.by/" target="_blank">
+                <img src="/images/assets/advertisment.jpg" alt="ad" width="340">
+            </a>
+        </div>
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <form id="one" th:action="@{/search}" method="post">
+            <input name="name" type="search" placeholder="Марка автомобиля" class="input">
+            <button type="submit" class="btn-bevel">Найти</button>
+        </form>
+        <div class="filters">
+            <a  href="/asc">По возрастанию</a>
+            <a href="/desc">По убыванию</a>
+
+        </div>
+
+        <form id="two" th:action="@{/filter}" method="post">
+            <input type="number" name="min" min="0" max="1000" placeholder="min" class="input">
+            <input type="number" name="max" min="1" max="1001" placeholder="max" class="input">
+            <button type="submit" class="btn-bevel">Найти</button>
+        </form>
+
+<div class="message" th:text="${message}"></div>
+
+
+        <div th:switch="${cars}">
+            <h2 th:case="null">Нет свободных автомобилей</h2>
+            <div th:case="*" class="content__table">
+                <div th:each = "car : ${cars}" class="content__block hidden">
+
+                    <div class="description">
+                        <span class="label">Название: </span><span class="data" th:text="${car.name}"></span><br>
+                        <span class="label">Модель: </span><span class="data" th:text="${car.model}"></span><br>
+                        <span class="label">Пассажиры: </span><span class="data" th:text="${car.passengers}"></span><br>
+                        <span class="label">Расход топлива: </span><span class="data" th:text="${car.rashodtopliva}"></span><br>
+                        <span class="label">Тип двигателя: </span><span class="data" th:text="${car.typedvigatelya}"></span><br>
+                        <span class="label">Макс. скорость: </span><span class="data" th:text="${car.maxspeed}"></span><br>
+                        <span class="label">Стоимость: </span><span class="data" th:text="${car.price}"></span><br>
+                        <span class="label">Время разгона: </span><span class="data" th:text="${car.vremyarazgona}"></span><br>
+                        <span class="label">Объем банзобака: </span><span class="data" th:text="${car.volumeofbak}"></span>
+
+                        <a th:href = "@{current-car/{id} (id=${car.id})}">
+                            <button style="margin-top: 30px;" type="button" class="btn-bevel">Арендовать</button>
+                        </a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

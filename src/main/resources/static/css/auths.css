@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    background:url("../images/assets/back2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height:100vh;
+}
+
+input{
+    padding:0.5rem;
+    height:28px;
+    width: 250px;
+    margin: 0.5rem;
+}
+
+.sign-up, .sign-in{
+    background-color: #fffcfc;
+    border-radius: 40px;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    
+    padding: 0.9rem;
+
+   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up{
+    display: none;
+}
+a{
+    color:#3F84E1;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:visited{
+    color:#3F84E1;
+    text-decoration: none;
+}
+
+.sign-in{
+    left: 15%;
+    top: 25%;
+}
+
+.sign-up{
+    left: 15%;
+    top: 25%;
+}
+
+.sign-up>img,.sign-in>img{
+    margin: 30px;
+    
+}
+
+p{
+    margin: 10px;
+    text-align: center;
+}
+
+.drive{
+    color:rgb(17, 16, 16);
+}
+
+.ave{
+    color:rgb(66, 155, 238);
+}
+  
+button{
+margin-bottom: 40px;
+text-align: center;
+
+display: block;
+cursor: pointer;
+}
+
+.btn-bevel{
+font-size: 16px;
+font-weight: bold;
+font-size: 16px;
+color: #FFFFFF;
+line-height: 1.5;
+padding: .5em 2em;
+background-image: linear-gradient(-180deg, 	#6EB1FF 0%, #4A90E2 100%);
+border: 1px solid #3F84E1;
+box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20), 	inset 0 3px 2px 0 rgba(255,255,255,0.16);
+border-radius: 5px;
+} 
+
+.btn-bevel:hover {
+background-image: linear-gradient(-180deg, 	#77B6FD 0%, #5999E5 100%);
+}
+
+.register{
+    position:absolute;
+    right: 2%;
+    top:2%;
+}
+
+.enter{
+    position:absolute;
+    left: 4%;
+    top:2%;
+}
+
+#player{
+    position: absolute;
+    bottom: 22%;
+    right: 10%;
+}

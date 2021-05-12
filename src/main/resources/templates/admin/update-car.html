@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveAve</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/profile-style.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/add-car">
+
+                        Добавить &#261;втомобиль
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars-list">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/reports">
+
+                        Отчеты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/customer-comments">
+
+                        Отзывы
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <div >
+            <img class="content__logo" src="/images/assets/logo.png" alt="logo" width="200">
+        </div>
+        <div class="form">
+
+            <form th:action="@{/car-update}" th:object="${car}" method="post">
+
+                <label for="id">ID</label>
+                <input type="text" th:field="*{id}" readonly id="id" placeholder="ID" value="" required>
+                <label for="name">Марка</label>
+                <input type="text" th:field="*{name}" id="name" placeholder="Марка" value="" required>
+                <label for="country">Модель</label>
+                <input type="text" th:field="*{model}" id="country" placeholder="Модель" value="">
+                <label for="internet">Кол-во пассажиров</label>
+                <input type="number" th:field="*{passengers}" min="1" id="internet" placeholder="Кол-во пассажиров" value="" required>
+                <label for="temperature">Расход топлива</label>
+                <input type="number" th:field="*{rashodtopliva}" step="1" id="temperature" placeholder="Расход топлива" required>
+                <label for="safety">Тип двигателя</label>
+                <select class="input" id="safety" th:field="*{typedvigatelya}">
+                    <option class="input" value="Инжекторный">
+                        Инжекторный
+                    </option>
+                    <option class="input" value="Карбюраторный">
+                        Карбюраторный
+                    </option>
+                    <option class="input" value="Дизельный">
+                        Дизельный
+                    </option>
+                </select>
+                <label for="enSpeaking">Макс. скорость</label>
+                <input type="number" th:field="*{maxspeed}" min="1" max="250" id="enSpeaking" placeholder="Макс. скорость" required>
+                <label for="cost">Цена</label>
+                <input type="number" th:field="*{price}" min="1" id="cost" placeholder="Цена" required>
+                <label for="fun">Время разгона</label>
+                <input type="number" th:field="*{vremyarazgona}" min="1" max="20" id="fun" placeholder="Время разгона" required>
+                <label for="hospitals">Объем бака</label>
+                <input type="number" th:field="*{volumeofbak}" min="1" max="100" id="hospitals" placeholder="Объем бака" required>
+                <label for="file">Забронировано?</label>
+                <select class="input" th:field="*{isBusy}" id="file">
+                    <option class="input" value="free">free</option>
+                    <option class="input" value="busy">busy</option>
+                </select>
+
+                <button type="submit" class="btn-bevel">Добавить</button>
+            </form>
+
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интересные факты</title>
+    <link rel="shortcut icon" href="/images/assets/logo.png" type="image/jpeg">
+    <link rel="stylesheet" href="/css/profile-style.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="content">
+    <div class="content__menu-bar">
+        <div class="content__nav-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+
+                        Мои з&#261;казы
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rent">
+
+                        Арен&#273;овать
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/cars">
+
+                        Наши &#261;втомобили
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/drive-ave-recommends">
+
+                        Рекомен&#273;ации
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/facts">
+
+                        Интересные ф&#261;кты
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/my-rate">
+
+                        Мой рейтинг
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/rate-us">
+
+                        Оценить сервис
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="ad">
+            <a href="https://lexus.by/" target="_blank">
+                <img src="/images/assets/advertisment.jpg" alt="ad" width="340">
+            </a>
+        </div>
+
+    </div>
+    <div class="content__main-frame">
+
+        <a href="/">
+            <div class="head">
+                <h1 class="service-name">DriveAve</h1>
+            </div>
+        </a>
+
+        <div class="form">
+            <p th:text="${first}"></p>
+            <p th:text="${second}"></p>
+            <p th:text="${third}"></p>
+            <p th:text="${fourth}"></p>
+            <p th:text="${fifth}"></p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

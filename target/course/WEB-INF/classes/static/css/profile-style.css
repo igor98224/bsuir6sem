@@ -1,0 +1,396 @@
+:root {
+	/* COLORS */
+	--white: #e9e9e9;
+	--gray: #333;
+	--green: #77b6fd;
+	--lightgreen:  #3F84E1;
+
+	/* RADII */
+	--button-radius: 0.7rem;
+
+	/* SIZES */
+	--max-width: 758px;
+	--max-height: 420px;
+
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+*{
+    padding:0;
+    margin: 0 auto;
+    outline:none;
+}
+
+.content{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.service-name{
+    font-family: 'Girassol', cursive;
+    font-size: 5rem;
+    position: relative;
+}
+
+.content__menu-bar{
+    width: 25%;
+    background: #032143;
+    height:100%;
+    color:var(--white);
+    position:relative;
+    box-shadow: -5px -1px 10px rgba(0,0,0,0.5);
+}
+
+.content__nav-bar{
+    height:50%;
+    overflow-y: scroll;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+.content__main-frame{
+    width:80%;
+    overflow: hidden;
+    background:var(--white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    height: 15%;
+    background: var(--white);
+    width: 100%;
+}
+
+.cont{
+    height: 80%;
+}
+
+a{
+    text-decoration: none;
+}
+
+span{
+    color:var(--white);
+    font-size: 3rem;
+    font-weight:800;
+}
+
+.ad{
+    position: relative;
+    top: 12%;
+    justify-self: center;
+    display: grid;
+}
+
+.content__logo{
+    border-radius: 50%;
+    position: absolute;
+    right: 2rem;
+    bottom:2rem;
+}
+.content__main-frame>a{
+    color: #333333;
+
+}
+#player{
+      position:absolute;
+      top:25%;
+      left:23%;
+}
+
+a, a:visited{
+    font-size:1.2rem;
+    font-weight:600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li {
+    font-size: inherit;
+    font-weight:inherit;
+    width:70%;
+    color: #e9e9e9;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+li a{
+    color: inherit;
+}
+
+.form{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    overflow-y: scroll;
+    background: #e9e9e9;
+    color: #333333;
+    padding: 1.9rem;
+}
+
+input, .input{
+    background-color: #fff;
+    border: none;
+    padding: 0.9rem 0.9rem;
+    margin: 0.5rem 0;
+    width: 50%;
+}
+
+label{
+    float:left;
+    width: 200px;
+}
+
+.btn {
+    background-color: var(--green);
+    background-image: linear-gradient(90deg, var(--green) 0%, var(--lightgreen) 74%);
+    border-radius: 20px;
+    border: 1px solid var(--green);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.btn1 {
+    background-color: var(--green);
+    background-image: linear-gradient(90deg, var(--green) 0%, var(--lightgreen) 74%);
+    border-radius: 20px;
+    border: 1px solid var(--green);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+form > .btn, form > .btn1 {
+    margin-top: 1.5rem;
+}
+
+.btn:active, .btn1:active {
+    transform: scale(0.95);
+}
+
+.btn:focus,.btn1:focus {
+    outline: none;
+}
+
+.description{
+    background: #032143;
+    color: #e9e9e9;
+    width: 230px;
+    height: 310px;
+    padding: 12px;
+    border-radius: 5px;
+    border: #77B6FD solid 2px;
+    box-shadow: 5px 5px 5px #333333;
+
+}
+.description span{
+    font-size: 14px;
+}
+
+.content__table{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 70%;
+}
+
+.filters{
+    position: absolute;
+    left:48px;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filters a{
+    color: #032143;
+    width: 100px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#one{
+    position: absolute;
+    right:48px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#two{
+    position: absolute;
+    right:48px;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#one input{
+    width: 200px;
+    margin-right: 10px;
+    height: 20px;
+}
+
+#one button{
+    height: 40px;
+    width: 120px;
+    padding: 5px;
+}
+
+#two input{
+    width: 90px;
+    margin-right: 10px;
+    height: 20px;
+    padding: 3px;
+}
+
+#two button{
+    height: 40px;
+    width: 120px;
+    padding: 5px;
+}
+
+.bill{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 70%;
+margin-bottom: 50px;
+}
+
+.sum{
+    width: 50%;
+}
+
+.form-list{
+    position: relative;
+    top: 10%;
+}
+
+th, td{
+    width: 150px;
+}
+
+th:nth-of-type(5), td:nth-of-type(5){
+    width: 20px;
+}
+
+table, th, tr, td{
+    border: #3F84E1 1px solid;
+}
+
+.message{
+    position: absolute;
+    top: 50px;
+    left:3.5%;
+}
+
+textarea{
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 50px;
+}
+
+.info{
+    position: absolute;
+    left: 5rem;
+    top: 15rem;
+    width: 100%;
+}
+
+.i{
+    position: absolute;
+    width: 35%;
+}
+
+.how-to-increase{
+    position: absolute;
+    right: 15%;
+    width: 50%;
+}
+
+.leave-a-comment{
+    background: #e9e9e9;
+    color: #333333;
+    position: absolute;
+    top: 10rem;
+    left: 22rem;
+    width: 30rem;
+    height: 20rem;
+    padding: 0.9rem;
+    border-radius: 20px;
+}
+
+.leave-a-comment textarea{
+    width: 30rem;
+}
+
+.description{
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    top: 2px;
+    right: 3px;
+}
+
+#first{
+    position: absolute;
+    top: 30rem;
+    left: 21%;
+    color: #032143;
+    z-index: 50;
+}
+
+#second{
+    position: absolute;
+    top: 30rem;
+    right: 21%;
+    color: #032143;
+    z-index: 50;
+}
+
+.form-2{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    background: #e9e9e9;
+    color: #333333;
+    padding: 1.9rem;
+}
